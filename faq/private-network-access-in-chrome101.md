@@ -14,7 +14,7 @@ description: How to resolve if Dynamic Web TWAIN stops working in Chrome 101?
 
 ### Symptom
 
-When visiting a website with Dynamic Web TWAIN SDK integrated via Chrome 101, you may see the following **error message** in the browser console.
+When visiting a website with Dynamic Web TWAIN SDK v17.2 or an older version integrated via Chrome 101, you may see the following **error message** in the browser console. For the end users of your website, they may get prompted to download and install the Dynamsoft Service repeatedly. NOTE that the same issue will also occur in any **Chromuim 101** based browsers such as Microsoft Edge 101.
 
 ```
 Access to XMLHttpRequest at 'https://local.dynamsoft.com:****' from origin 'https://yourwebsiteURL' has been blocked by CORS policy: 
@@ -40,9 +40,11 @@ Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support 
 
 ### Resolution
 
-1. Upgrade Dynamic Web TWAIN SDK to version 17.2.1 or later
+You can apply one of the following solutions:
 
-   In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. This version is expected to be released by end of February 2022.
+1. Upgrade Dynamic Web TWAIN SDK to **version 17.2.1** or later
+
+   In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. This version is expected to be released by March 4th, 2022.
 
    Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider [installing Dynamsoft Service silently](https://www.dynamsoft.com/web-twain/docs/faq/can-i-install-dynamsoft-service-silently.html?ver=latest#can-i-install-dynamsoft-service-silently).
 
@@ -55,7 +57,7 @@ Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support 
 
    For more details about managing policies for your users, please refer to Google's [help center article](https://support.google.com/chrome/a/answer/9037717).
 
-#### If you need more time to implement the solution
+### If you need more time to implement the solution
 
    Register for [Google's deprecation trials](https://developer.chrome.com/blog/origin-trials/#deprecation-trials) to request a time extension so your website will not be affected during the trial period which will last for at least 6 months.
 
